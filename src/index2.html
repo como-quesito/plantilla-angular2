@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Para usar el json con un get utilizaste el material que viene en:
+    https://angular.io/docs/ts/latest/api/http/Http-class.html
+
+    El resto procediste de la misma manera que los anteriores, no olvides que debes de agregar el
+    script http.js
+    -->
+    <meta charset="UTF-8">
+    <title>GET con json</title>
+    <title>Angular 2 QuickStart</title>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="../node_modules/angular2/bundles/http.js"></script>
+    <script>
+        System.config({
+            packages: {'app': {defaultExtension: 'js'}}
+        });
+        System.import('app/app2');
+    </script>
+</head>
+<body>
+<app2>Cargando...</app2>
+</body>
+</html>
