@@ -1,0 +1,52 @@
+<html>
+<head>
+    <!--
+    El primer paso es:
+    1. crear en un proyecto nuevo la carpeta src y dentro de ella la carpeta app
+        DEntro de la carpeta src crear el index.html y dentro de la carpeta app
+        crear el app.ts
+
+    2.Vas a regresar a la carpeta src y en ella vas a ejecutar
+    npm init -y
+    Lo que hace este archivo es generar el archivo package.json , el cual mas adelante
+    tendras que modificar
+
+    3. Instalamos la ultima version de angular2
+    npm i angular2@2.0.0-alpha.44 systemjs@0.19.2 --save --save-exact
+
+    4. A continuación vamos a instalar el servidor de typescript
+    npm i typescript live-server --save-dev
+
+    Estos dos ultimos pasos descargan las dependencias de angular 2.0 y del compilador typescript
+    los puedes checar en el archivo package.json
+
+    5. En el archivo package.json vas a borra y editar la seccion script por lo siguiente y
+    debera de queda como sigue:
+     "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src"
+  }
+    Lo que hace esta seccion es que podremos estar ejecutando los dos scripts para
+    que entre en modo de compilacion para ejecutar los cambios al
+     instante y para que iniciemos el servidor
+
+   6.  Modifica rlas dependencias talcomo estan en este archico para los scripts
+
+   7. Generar un nuevo archivo dentro de la carpeta src que se llame tsconfig.json
+      Este archivo contiene configuarciones que dira al editor de intelliidea como
+      interpretar el codigo de typescript para este proyecto
+    -->
+    <title>Angular 2 QuickStart</title>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+        System.config({
+            packages: {'app': {defaultExtension: 'js'}}
+        });
+        System.import('app/app');
+    </script>
+</head>
+<body>
+<my-app>loading...</my-app>
+</body>
+</html>
