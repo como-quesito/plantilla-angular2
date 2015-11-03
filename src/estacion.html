@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div>
+    <h2>Temperaturas ultimas 24 horas</h2>
+    <ul>
+        <li *ng-for="#estacion of temperaturas">
+         hora:{{estacion.hora}} temp:  {{estacion.temperatura}}
+        </li>
+    </ul>
+</div>
+</body>
+</html>
